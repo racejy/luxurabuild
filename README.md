@@ -1,83 +1,66 @@
-# luxurabuild
+# LuxuraBuild
 
-LuxuraBuild is a lightweight, local-first web application for generating construction draw sheets quickly and accurately. It eliminates repetitive manual entry by auto-populating subcontractor data (name, address, cost codes) and exporting clean draw sheets to Excel or PDF.
+LuxuraBuild is a **simple, local draw sheet tool** for construction offices.  
+It reduces manual typing by auto-filling subcontractor information and lets office staff build draw sheets quickly in the browser.
 
-This tool is designed for internal office use, prioritizing speed, simplicity, and reliability.
+This tool is designed for **internal use only** and runs entirely on your local machine.
+
+---
+
+## What This Is
+
+- A small HTML + CSS + JavaScript tool
+- Opened directly in a browser (no server required)
+- Built to save time, not to be “perfect”
 
 ---
 
 ## Key Features
 
-- Auto-populated subcontractor fields (name, address, cost code)
-- Simple draw sheet builder with editable line items
-- Add and remove rows quickly
-- One-click export to Excel and PDF
-- Local-only execution (no cloud, no authentication)
-- Minimal setup and fast iteration
+- Subcontractor dropdown with auto-filled address and cost code
+- Add and remove line items quickly
+- Clean, readable draw sheet layout
+- No accounts, no login, no cloud
+- Works offline
+
+---
+
+## What This Is *Not*
+
+- Not a SaaS app
+- Not a backend system
+- Not connected to accounting software
+- Not over-engineered
 
 ---
 
 ## Tech Stack
 
-- Backend: Python + Flask  
-- Database: SQLite (local-only)  
-- Frontend: HTML, CSS, minimal JavaScript  
-- Exports: Excel (.xlsx) and PDF  
+- HTML
+- CSS
+- Vanilla JavaScript
 
-No external services. No third-party accounts. No network dependency.
+That’s it.
 
 ---
 
 ## Project Structure
 
 luxurabuild/
-├── app.py # Flask application entry point
-├── requirements.txt # Python dependencies
-├── README.md
-├── LICENSE
-├── .gitignore
-│
-├── data/
-│ ├── schema.sql # Database schema (no data committed)
-│
-├── templates/
-│ ├── index.html # Draw sheet builder UI
-│
-├── static/
-│ ├── css/
-│ │ └── styles.css
-│ └── js/
-│ └── app.js
-│
-├── exports/ # Generated Excel / PDF files (gitignored)
+├── index.html # Main draw sheet UI
+├── styles.css # Basic styling
+└── app.js # Simple client-side logic
 
 ---
 
 ## Getting Started
 
-### 1. Clone the Repository
+1. Clone or download the repository
 
 bash
-git clone https://github.com/your-username/luxurabuild.git
-cd luxurabuild
+git clone https://github.com/{your-username}/luxurabuild.git
 
-### 2. Create a Virtual Environment
+Open the folder
+Double-click index.html
 
-python3 -m venv venv
-source venv/bin/activate
-
-### 3. Install Dependencies
-
-pip install -r requirements.txt
-
-### 4. Initialize the Database
-
-sqlite3 data/luxurabuild.db < data/schema.sql
-
-### 5. Run the App
-
-python app.py
-
-### 6. Open:
-
-http://localhost:5000
+The app opens immediately in your browser.
